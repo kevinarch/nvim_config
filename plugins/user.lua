@@ -48,5 +48,10 @@ return {
       } -- use defaults
     end,
   },
-  { "nvim-telescope/telescope.nvim",    opts = function() require("telescope").load_extension "flutter" end },
+  { "nvim-telescope/telescope.nvim", opts = function() require("telescope").load_extension "flutter" end },
+  {
+    "klesh/nvim-runscript",
+    lazy = false,
+    config = function() require("nvim-runscript").setup {} end,
+  },
 }
