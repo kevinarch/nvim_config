@@ -25,15 +25,15 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["K"] = {
       "<cmd> lua vim.lsp.buf.hover()<cr>",
-      desc = "[Flutter] Show hover",
+      desc = "Show hover",
     },
     ["gd"] = {
       "<Cmd>lua vim.lsp.buf.definition()<CR>",
-      desc = "[Flutter] Jump to definition",
+      desc = "Jump to definition",
     },
-    ["<leader>ca"] = {
+    ["<leader>Fa"] = {
       "<Cmd>lua vim.lsp.buf.code_action()<CR>",
-      desc = "[Flutter] Open code actions",
+      desc = "Open code actions",
     },
   },
   t = {
@@ -41,9 +41,9 @@ return {
     -- ["<esc>"] = false,
   },
   x = {
-    ["<leader>ca"] = {
+    ["<leader>Fa"] = {
       "<Cmd>lua vim.lsp.buf.range_code_action()<CR>",
-      desc = "[Flutter] Open code actions for the selected visual range",
+      desc = "Open code actions for the selected visual range",
     },
   },
 }
