@@ -64,6 +64,9 @@ return {
     enable_git_status = false,
     filesystem = {
       follow_current_file = true,
+      filtered_items = {
+        visible = true,
+      }
     },
     buffer = {
       follow_current_file = true,
