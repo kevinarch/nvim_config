@@ -24,31 +24,29 @@ return {
     underline = true,
   },
   lsp = {
-    -- customize lsp formatting options
-    formatting = {
-      -- control auto formatting on save
-      format_on_save = {
-        enabled = true, -- enable or disable format on save globally
-        allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
-        },
-        ignore_filetypes = { -- disable format on save for specified filetypes
-          -- "python",
-        },
-      },
-      disabled = { -- disable formatting capabilities for the listed language servers
-        -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
-        -- "lua_ls",
-      },
-      timeout_ms = 1000, -- default format timeout
-      -- filter = function(client) -- fully override the default formatting function
-      --   return true
-      -- end
-    },
-    -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "dartls",
     },
+    setup_handlers = {
+      -- add custom handler
+      dartls = function(_, opts) require("flutter-tools").setup { lsp = opts } end,
+    },
+    config = {
+      dartls = {
+        -- any changes you want to make to the LSP setup, for example
+        color = {
+          enabled = true,
+          virtual_text = false,
+        },
+        settings = {
+          showTodos = true,
+          completeFunctionCalls = true,
+        },
+      },
+    },
+  },
+  plugins = {
+    "akinsho/flutter-tools.nvim", -- add lsp plugin
   },
   -- Configure require("lazy").setup() options
   lazy = {
@@ -66,7 +64,7 @@ return {
       follow_current_file = true,
       filtered_items = {
         visible = true,
-      }
+      },
     },
     buffer = {
       follow_current_file = true,
