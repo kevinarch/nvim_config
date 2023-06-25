@@ -33,7 +33,23 @@ return {
     },
     ["<leader>Fa"] = {
       "<Cmd>lua vim.lsp.buf.code_action()<CR>",
-      desc = "Open code actions",
+      desc = "Code Actions",
+    },
+    ["<leader>Ra"] = {
+      "<Cmd>lua vim.lsp.buf.code_action()<CR>",
+      desc = "Code Actions",
+    },
+    ["<leader>Rf"] = {
+      "<Cmd>RustFmt<CR>",
+      desc = "Format",
+    },
+    ["<leader>Rr"] = {
+      "<Cmd>RustRunnables<CR>",
+      desc = "Run",
+    },
+    ["<leader>Rd"] = {
+      "<Cmd>RustDebuggables<CR>",
+      desc = "Debug",
     },
   },
   t = {

@@ -50,11 +50,6 @@ return {
   },
   { "nvim-telescope/telescope.nvim", opts = function() require("telescope").load_extension "flutter" end },
   {
-    "klesh/nvim-runscript",
-    lazy = false,
-    config = function() require("nvim-runscript").setup {} end,
-  },
-  {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
@@ -63,5 +58,9 @@ return {
         -- Configuration here, or leave empty to use defaults
       }
     end,
+  },
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
   },
 }
