@@ -1,4 +1,4 @@
-local utils = require "astrocommunity.utils"
+local utils = require "astronvim.utils"
 
 return {
   -- You can also add new plugins here as well:
