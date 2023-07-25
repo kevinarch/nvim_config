@@ -65,6 +65,7 @@ return {
       filtered_items = {
         visible = true,
       },
+      use_libuv_file_watcher = true,
     },
     buffer = {
       follow_current_file = true,
