@@ -11,7 +11,6 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  { import = "astrocommunity.pack.yaml" },
   {
     "akinsho/flutter-tools.nvim",
     ft = { "dart" },
