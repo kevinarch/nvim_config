@@ -33,8 +33,8 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["K"] = {
-      "<cmd> lua vim.lsp.buf.hover()<cr>",
+    ["<C-p>"] = {
+      "<cmd>lua vim.lsp.buf.hover()<cr>",
       desc = "Show hover",
     },
     ["gd"] = {
